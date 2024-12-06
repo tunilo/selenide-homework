@@ -13,6 +13,7 @@ public class SelenideTests extends BaseTest {
     public void validateBundleOffers() throws InterruptedException {
         open(Constants.DEMOS_URL);
         $x("//a[@class='TK-Menu-Item-Link' and text()='Pricing']").click();
+//გამარჯობათ ძმდებო, აღარ მაგ ორიგინალურობის ნერვი
 //ეს დავალება 40 ზე მეტი უნდა იყოს, გვტანჯა
         SelenideElement stickyContainer = $x("//div[@class='PricingTable-Sticky']");
 // სცენა 1 დუბლი 1
