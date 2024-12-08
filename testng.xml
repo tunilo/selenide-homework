@@ -8,15 +8,15 @@
         <classes>
             <class name="SelenideTests">
             </class>
+            <class name="SelenideTests2"></class>
         </classes>
     </test>
 
     <test name="firefoxTest">
         <parameter name="browserType" value="firefox"/>
         <classes>
-            <class name="SelenideTests">
-
-            </class>
+            <class name="SelenideTests"></class>
+            <class name="SelenideTests2"></class>
         </classes>
     </test>
 
