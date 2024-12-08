@@ -19,7 +19,11 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
 //ამან უნდა მამკლას მე?
+
+//საშინელი კოდია მაგრამ მუშაობს, ზოგჯერ სლიფები უნნდა
+
 public class SelenideTests2 extends BaseTest {
     @Test
     public void validateDemosDesign() {
