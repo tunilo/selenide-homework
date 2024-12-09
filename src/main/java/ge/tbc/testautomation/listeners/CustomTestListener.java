@@ -14,6 +14,7 @@ public class CustomTestListener implements ITestListener {
     public void onTestSuccess(ITestResult result) {
         System.out.println("Test [" + result.getMethod().getMethodName() + "] passed at " + System.currentTimeMillis());
     }
+//კი არ ფეილდება ჩემი ტესტები მაგრამ მაინც გაწერეთო
 //არა კი არ ფეილდება, მაგრამ მაინც ოპტიმისტი რო იქნები ადამიანი :დდდ
     @Override
     public void onTestFailure(ITestResult result) {
