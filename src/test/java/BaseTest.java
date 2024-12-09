@@ -4,6 +4,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
@@ -21,19 +22,23 @@ public class BaseTest {
             WebDriverManager.firefoxdriver().setup();
             WebDriverRunner.setWebDriver(new FirefoxDriver());
             Configuration.browser = "firefox";
+        } else if (browserType.equalsIgnoreCase("edge")) {
+            WebDriverManager.edgedriver().setup();
+            WebDriverRunner.setWebDriver(new EdgeDriver());
+            Configuration.browser = "edge";
         } else {
             throw new IllegalArgumentException("Unsupported browser type: " + browserType);
         }
 
-        // Common configuration
         Configuration.timeout = 10000;
         Configuration.assertionMode = AssertionMode.STRICT;
-        Configuration.holdBrowserOpen = false; // Ensure the browser closes automatically
+        Configuration.holdBrowserOpen = false;
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
+
     @AfterTest
     public void tearDown() {
-        Selenide.closeWebDriver();
+               Selenide.closeWebDriver();
 
     }
 }

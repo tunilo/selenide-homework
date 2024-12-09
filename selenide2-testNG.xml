@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite name="TestSuite" thread-count="3" parallel="tests">
+<suite name="Selenide2 Suite" parallel="tests" thread-count="3">
     <listeners>
         <listener class-name="ge.tbc.testautomation.listeners.CustomSuiteListener"/>
         <listener class-name="ge.tbc.testautomation.listeners.CustomTestListener"/>
@@ -12,25 +9,27 @@
     <test name="ChromeTest">
         <parameter name="browserType" value="chrome"/>
         <classes>
-            <class name="SelenideTests">
+
+            <class name="SelenideTests2">
+
             </class>
-            <class name="SelenideTests2"></class>
         </classes>
     </test>
 
     <test name="firefoxTest">
         <parameter name="browserType" value="firefox"/>
         <classes>
-            <class name="SelenideTests"></class>
-            <class name="SelenideTests2"></class>
+            <class name="SelenideTests2">
+
+            </class>
         </classes>
     </test>
     <test name="edge">
         <parameter name="browserType" value="edge"/>
         <classes>
-            <class name="SelenideTests"></class>
-            <class name="SelenideTests2"></class>
+            <class name="SelenideTests2">
+
+            </class>
         </classes>
     </test>
-
 </suite>
