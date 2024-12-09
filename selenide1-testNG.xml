@@ -17,13 +17,13 @@
     <test name="firefoxTest">
         <parameter name="browserType" value="firefox"/>
         <classes>
-            <class name="SelenideTests"></class>
+            <class name="SelenideTests"/>
         </classes>
     </test>
     <test name="edge">
         <parameter name="browserType" value="edge"/>
         <classes>
-            <class name="SelenideTests"></class>
+            <class name="SelenideTests"/>
         </classes>
     </test>
 </suite>
