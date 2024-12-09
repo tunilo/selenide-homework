@@ -6,9 +6,11 @@ import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.xml.XmlSuite;
 
+import java.util.List;
+
 public class CustomReportListener implements IReporter {
         @Override
-        public void generateReport(java.util.List<XmlSuite> xmlSuites, java.util.List<ISuite> suites, String outputDirectory) {
+        public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
             for (ISuite suite : suites) {
                 for (ISuiteResult result : suite.getResults().values()) {
                     ITestContext context = result.getTestContext();
