@@ -204,7 +204,7 @@ public class SelenideTests extends BaseTest {
 
     }
 
-    //სცენა 4
+    //სცენა 4 //ეს ტესტი კი მიდის ლიწინით და სულ არ ჭირდება retry
     @Test(groups = {"Selenide 2", "dropDown-FrontEnd"}, priority = 1, retryAnalyzer = RetryAnalyzer.class)
     @RetryCount(count = 5)
     public void dropDownTest() {
