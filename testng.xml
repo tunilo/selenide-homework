@@ -54,7 +54,8 @@
 
     <test name="RunGroups">
         <groups>
-            <run>  <!--    მარტო frontend იო და აჰაა-->
+
+            <run> 
                 <include name=".*FrontEnd" />
             </run>
         </groups>
