@@ -13,7 +13,8 @@ public class RetryAnalyzer implements IRetryAnalyzer {
         if (counter < annotation.count()){
             counter++;
             return true;
-        }//მერე რა რო ცოტნეს ეწერა? ჩემითაც შემეძლო ამის დაწერა :დდ
+        }
+        }
         return false;
     }
 }
