@@ -204,7 +204,7 @@ public class SelenideTests extends BaseTest {
 
     }
 
-    //სცენა 4 // იყოს retry რა იცი რა ხდება ოჯახი ხრამია
+    //სცენა 4
     @Test(groups = {"Selenide 2", "dropDown-FrontEnd"}, priority = 1, retryAnalyzer = RetryAnalyzer.class)
     @RetryCount(count = 5)
     public void dropDownTest() {
