@@ -82,7 +82,7 @@ public class SelenideTests2 extends BaseTest {
             link.click();
             String actualBackground = link.getCssValue("background-color");
             Assertions.assertNotEquals("rgba(0, 0, 0, 0)", actualBackground);
-            // sleep(1500); // i cant find better solution
+             sleep(1500); // i cant find better solution
 
             SelenideElement visibleHeader = headers.stream()
                     .filter(header -> Selenide.executeJavaScript(
@@ -296,7 +296,7 @@ public class SelenideTests2 extends BaseTest {
         backButton.scrollTo();
         backButton.shouldBe(Condition.visible).click();
         SelenideElement continueAsGuestButton = $x("//button[contains(@class, 'btn-primary e2e-continue sm-width-100 loader-button')]");
-
+sleep(2000);
         continueAsGuestButton.scrollTo();
         continueAsGuestButton.shouldBe(Condition.visible).click();
         try {
