@@ -2,6 +2,7 @@ package ge.tbc.testautomation.listeners;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
+import org.testng.Reporter;
 
 import java.time.Instant;
 import java.time.ZoneId;
@@ -19,14 +20,17 @@ public class CustomSuiteListener implements ISuiteListener {
 
     @Override
     public void onStart(ISuite suite) {
-        startTime = System.currentTimeMillis();
-        System.out.println("Suite [" + suite.getName() + "] started at " + formatTime(startTime));
+        String startMessage = "Suite [" + suite.getName() + "] started at " + formatTime(startTime);
+        Reporter.log(startMessage, true);
     }
 
     @Override
     public void onFinish(ISuite suite) {
         long endTime = System.currentTimeMillis();
-        System.out.println("Suite [" + suite.getName() + "] finished at " + formatTime(endTime));
-        System.out.println("Total time taken: " + (endTime - startTime) / 1000 + " seconds");
+        String endMessage = "Suite [" + suite.getName() + "] finished at " + formatTime(endTime);
+        String durationMessage = "Total time taken: " + (endTime - startTime) / 1000 + " seconds";
+
+        Reporter.log(endMessage, true);
+        Reporter.log(durationMessage, true);
     }
 }
