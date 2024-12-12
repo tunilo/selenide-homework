@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 //ამან უნდა მამკლას მე?
 public class SelenideTests2 extends BaseTest {
-    @Test
+    @Test(groups = {"Selenide 2"})
     public void validateDemosDesign() {
         open(Constants.DEMOS_URL);
         $x("//a[@href='#web']").click();
@@ -105,7 +105,7 @@ public class SelenideTests2 extends BaseTest {
         }
     }
 
-    @Test
+    @Test(groups = {"Selenide 2"})
     public void validateOrderMechanics() {
         open(Constants.DEMOS_URL);
         $x(Constants.PRICING_MENU_LINK_XPATH).click();
@@ -230,7 +230,7 @@ public class SelenideTests2 extends BaseTest {
 
     }
 
-    @Test
+    @Test(groups = {"Selenide 2"})
     public void chainedLocatorsTest() {
         open("https://demoqa.com/books");
         ElementsCollection books = $$x("//div[@class='rt-tbody']//div[@class='rt-tr-group']")
@@ -242,7 +242,7 @@ public class SelenideTests2 extends BaseTest {
             image.shouldHave(Condition.attributeMatching("src", ".*\\S+.*"));
         }
     }
-    @Test
+    @Test(groups = {"Selenide 2"})
     public void softAssertTest() {
         open("https://demoqa.com/books");
         ElementsCollection allBooks = $$x("//div[@class='rt-tbody']//div[@class='rt-tr-group']")
