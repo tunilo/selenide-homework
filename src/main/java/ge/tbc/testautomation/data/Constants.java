@@ -4,6 +4,7 @@ public class Constants {
     public static final String DEMOS_URL = "https://www.telerik.com/support/demos";
     public static final String HEROKUAPP_URL = "http://the-internet.herokuapp.com/dropdown";
     public static final String DEMOCA_URL = "https://demoqa.com/text-box ";
+    public static final String DEMOCA_FORM_URL = "https://demoqa.com/automation-practice-form";
     public static final String FULL_NAME ="Tekle Shalikiani";
     public static final String EMAIL = "tekla.shalikiani123@gmail.com";
     public static final String ADDRESS = "Dighomi array, Tbilisi";
@@ -38,4 +39,39 @@ public class Constants {
     public static final String SAVINGS_ELEMENT_XPATH = "//div[contains(@class, 'e2e-item-ms-savings') and contains(text(), 'Save')]";
     public static final String POPUP_XPATH = "//kendo-popup[contains(@class, 'k-animation-container-shown')]";
     public static final String DROPDOWN_BUTTON_YERS = "(//button[contains(@class, 'k-input-button') and .//kendo-svgicon[contains(@class, 'k-svg-i-caret-alt-down')]])[last()]";
+
+
+    public static final String HOLIDAY_PAGE_LINK = "//p[contains(text(), 'დასვენება')]";
+    public static final String MOUNTAIN_RESORTS = "//h5[contains(text(),'მთის კურორტები')]";
+    public static final String FULL_PAYMENT_OPTION = "//span[contains(text(),'სრული გადახდა')]";
+    public static final String FULL_PAYMENT_ICON = "//p[text()='სრული გადახდა']";
+    public static final String PRICE_LOCATOR = "//h4[contains(., '₾') and @weight='bold']";
+    public static final String SORT_BUTTON = "//p[contains(text(), 'შესაბამისობით')]";
+    public static final String ASCENDING_ORDER = "//p[contains(text(), 'ფასით ზრდადი')]";
+    public static final String DESCENDING_ORDER = "//p[contains(text(), 'ფასით კლებადი')]";
+    public static String MIN_PRICE_INPUT = "//div[contains(@class, 'relative') and ./p[contains(text(), 'დან')]]//input\n";
+    public static String MAX_PRICE_INPUT = "//div[contains(@class, 'relative') and ./p[contains(text(), 'მდე')]]//input\n";
+    public static String  MIN_PRICE = "0";
+    public static String  MAX_PRICE = "600";
+    public static int  MIN_PRICE_INT = 0;
+    public static int  MAX_PRICE_INT = 600;
+    public static String FILTER_BUTTON ="//button[contains(@class, 'flex group items-center justify-center') and contains(@class, 'hover:bg-primary_green-20-value')]";
+    public static final String CATEGORY_2 = "//p[contains(text(), 'სპორტი')]";
+    public static final String CATEGORY_1 = "//p[contains(text(), 'დასვენება')]";
+    public static final String CATEGORY_3 = "//p[contains(text(), 'კვება')]";
+    public static final String SWOOP_HOME_URL = "https://www.swoop.ge/";
+    public static final String FIRST_NAME_INPUT = "//input[@id='firstName']";
+    public static final String LAST_NAME_INPUT = "//input[@id='lastName']";
+    public static final String USER_NUMBER_INPUT = "//input[@id='userNumber']";
+    public static final String SUBMIT_BUTTON = "//button[@id='submit']";
+    public static final String STUDENT_NAME_CELL = "//td[text()='Student Name']/following-sibling::td";
+    public static final String DISCOUNT_PRICE_LOCATOR = ".//p[contains(text(), '%') and @weight='bold']";
+    public static final String SPORT_SECTION = "//p[contains(text(), 'სპორტი')]";
+    public static final String INITIAL_PRICE_LOCATOR = ".//h4[contains(@class, 'line-through') and contains(., '₾')]";
+    public static final String ADD_TO_BASKET_BUTTON = "//p[contains(text(), 'კალათაში დამატება')]";
+    public static final String CART_BUTTON = "//a[contains(@class, 'items-center') and contains(@href, '/basket')]";
+    public static final String CART_ITEMS_LOCATOR = "//div[contains(@class, 'flex w-full tablet:gap-6')]";
+    public static final String NEW_PRICE_LOCATOR = ".//h4[contains(., '₾') and @weight='bold']";
+
+
 }
