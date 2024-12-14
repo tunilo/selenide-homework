@@ -1,3 +1,5 @@
+import ge.tbc.testautomation.utils.RetryAnalyzer;
+import ge.tbc.testautomation.utils.RetryCount;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
@@ -9,7 +11,8 @@ import com.codeborne.selenide.*;
 
 
 public class SelenideTests extends BaseTest {
-    @Test
+    @Test(groups = {"Selenide 1"},priority = 4, retryAnalyzer = RetryAnalyzer.class)
+    @RetryCount(count = 5)
     public void validateBundleOffers() throws InterruptedException {
         open(Constants.DEMOS_URL);
         $x("//a[@class='TK-Menu-Item-Link' and text()='Pricing']").click();
@@ -146,7 +149,8 @@ public class SelenideTests extends BaseTest {
         stickyContainer.shouldBe(Condition.visible);
     }
 
-    @Test
+    @Test(groups = {"Selenide 1"}, priority = 5,retryAnalyzer = RetryAnalyzer.class)
+    @RetryCount(count = 5)
     public void validateIndividualOffers() {
         //სცენა 2 კადრი 1
         open(Constants.DEMOS_URL);
@@ -185,7 +189,7 @@ public class SelenideTests extends BaseTest {
     }
 
     //სცენა 3 იზი პიზი
-    @Test
+    @Test(groups = {"Selenide 1", "CheckBoxes-FrontEnd"} , priority = 3)
     public void checkBoxTest() {
         open("http://the-internet.herokuapp.com/checkboxes");
         SelenideElement firstCheckbox = $x("//form[@id='checkboxes']/input");
@@ -202,7 +206,8 @@ public class SelenideTests extends BaseTest {
     }
 
     //სცენა 4
-    @Test
+    @Test(groups = {"Selenide 2", "dropDown-FrontEnd"}, priority = 1, retryAnalyzer = RetryAnalyzer.class)
+    @RetryCount(count = 5)
     public void dropDownTest() {
         open(Constants.HEROKUAPP_URL);
         SelenideElement dropdown = $("#dropdown");
@@ -213,7 +218,7 @@ public class SelenideTests extends BaseTest {
     }
     //სცენა 5
 
-    @Test
+    @Test(priority = 2, groups = {"Selenide 2"})
     public void collectionsTest()  {
         WebDriverManager.firefoxdriver().setup();
         WebDriverRunner.setWebDriver(new FirefoxDriver());
